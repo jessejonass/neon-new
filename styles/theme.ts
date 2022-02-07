@@ -23,6 +23,7 @@ const sizes = {
 };
 
 const breakpoints = {
+  header: 1180,
   desktopAndUp: 1024,
   tabletAndUp: 728,
   mobileOnly: 500,
@@ -30,11 +31,19 @@ const breakpoints = {
 
 const light = {
   colors: {
-    bg: "#fff",
-    text: "#303030",
-    green: "#749E90",
-    petroleum: "#778C90",
-    jacarta: "#3f3b54",
+    grey600: "#33303E",
+    grey500: "#4E4B59",
+    grey400: "#5F5C6B",
+    grey300: "#7A7786",
+    grey200: "#C6C5CE",
+    grey100: "#F1F0F5",
+    white: "#FFFFFF",
+    blue: "#0073CE",
+    blueLight: "#00A5F0",
+    greenLight: "#00D7D7",
+    yellow: "#FFC800",
+    yellowLight: "#FFDC5C",
+    gradient: "linear-gradient(99.31deg, #00A5F0 7.94%, #00D7D7 95.32%)",
   },
   spacing,
   sizes,
@@ -43,11 +52,19 @@ const light = {
 
 const dark = {
   colors: {
-    bg: "#303030",
-    text: "#fff",
-    green: "#749E90",
-    petroleum: "#778C90",
-    jacarta: "#3f3b54",
+    grey600: "#33303E",
+    grey500: "#4E4B59",
+    grey400: "#5F5C6B",
+    grey300: "#7A7786",
+    grey200: "#C6C5CE",
+    grey100: "#F1F0F5",
+    white: "#FFFFFF",
+    blue: "#0073CE",
+    blueLight: "#00A5F0",
+    greenLight: "#00D7D7",
+    yellow: "#FFC800",
+    yellowLight: "#FFDC5C",
+    gradient: "linear-gradient(99.31deg, #00A5F0 7.94%, #00D7D7 95.32%)",
   },
   spacing,
   sizes,

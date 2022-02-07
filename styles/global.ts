@@ -20,8 +20,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: var(--grey-900);
-    color: var(--white);
+    background: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.grey600};
   }
 
   body, input, textarea, select, button {
@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
+    border: 0;
     cursor: pointer;
   }
 
