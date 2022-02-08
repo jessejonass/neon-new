@@ -3,7 +3,7 @@ import { ButtonContainer, Text } from "./styles";
 import { ButtonProps } from "./types";
 
 const Button: FC<ButtonProps> = ({
-  variant = "primary",
+  variant = "translucent",
   children,
   disabled,
   ...props

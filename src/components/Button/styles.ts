@@ -5,8 +5,10 @@ export const ButtonContainer = styled.button<Required<StylesProps>>`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: ${({ theme }) =>
-    `${theme.spacing.small}px ${theme.spacing.small * 2}px`};
+  font-weight: 500;
+  transition: 0.3s background ease;
+
+  padding: ${({ theme }) => `${theme.spacing.sm}px ${theme.spacing.sm * 2}px`};
   border-radius: 122px;
 
   :disabled {
@@ -16,7 +18,6 @@ export const ButtonContainer = styled.button<Required<StylesProps>>`
     opacity: 0.5;
   }
 
-  transition: 0.3s background ease;
   ${(props) => ButtonVariant(props.variant)}
 `;
 
@@ -27,35 +28,43 @@ export const Text = styled.span`
 const ButtonVariant = (variant: ButtonVariants) => {
   const table = {
     primary: css`
-      font-weight: 400;
+      background: ${({ theme }) => theme.colors.yellow600};
       color: ${(props) => props.theme.colors.grey600};
-      background-color: ${(props) => props.theme.colors.yellow};
 
       &:hover {
-        background-color: ${(props) => props.theme.colors.yellowLight};
+        background: ${(props) => props.theme.colors.yellow500};
       }
     `,
+
     secondary: css`
-      font-weight: bold;
-      background-color: transparent;
-      color: ${(props) => props.theme.colors.blueLight};
-      border: 1px solid ${(props) => props.theme.colors.blueLight};
+      background: none;
+      color: ${(props) => props.theme.colors.blue500};
+      border: 1px solid ${(props) => props.theme.colors.blue500};
 
       &:hover {
-        background-color: ${(props) => props.theme.colors.white};
-        color: ${(props) => props.theme.colors.blueLight};
+        background: ${(props) => props.theme.colors.bg};
+        color: ${(props) => props.theme.colors.blue500};
       }
     `,
 
     light: css`
-      font-weight: bold;
-      background-color: transparent;
-      color: ${(props) => props.theme.colors.white};
-      border: 1px solid ${(props) => props.theme.colors.white};
+      background: none;
+      color: ${(props) => props.theme.colors.bg};
+      border: 1px solid ${(props) => props.theme.colors.bg};
 
       &:hover {
-        background-color: ${(props) => props.theme.colors.white};
-        color: ${(props) => props.theme.colors.blueLight};
+        background: ${(props) => props.theme.colors.bg};
+        color: ${(props) => props.theme.colors.blue500};
+      }
+    `,
+
+    translucent: css`
+      background: none;
+      border: none;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.6;
       }
     `,
   };
