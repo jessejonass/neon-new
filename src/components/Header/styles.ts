@@ -1,52 +1,66 @@
 import styled from "styled-components";
 
-export const HeaderButtons = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 export const HeaderContainer = styled.header`
-  width: 100%;
-  padding: ${({ theme }) => theme.sizes.large};
-  background: ${({ theme }) => theme.colors.gradient};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.white};
-
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 ${({ theme }) => theme.spacing.sm}px;
+  background: ${({ theme }) => theme.colors.gradient};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.bg};
+
+  svg {
+    height: ${({ theme }) => theme.sizes.xxl};
+  }
 `;
 
 export const HeaderContent = styled.div`
-  width: 1216px;
-  margin: 0 auto;
-
   display: flex;
   align-items: center;
+  width: ${({ theme }) => theme.widths.lg}px;
+  padding-top: ${({ theme }) => theme.sizes.md};
+  padding-bottom: ${({ theme }) => theme.sizes.xxs};
 
-  ${HeaderButtons} {
-    margin-left: auto;
+  // responsive content padding
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+    padding: ${({ theme }) => `${theme.sizes.xxl} 0`};
   }
-`;
-
-export const HeaderLogo = styled.image.attrs({
-  src: "/images/logo-white.svg",
-})`
-  height: 40px;
 `;
 
 export const NavigationContainer = styled.nav`
-  margin-left: 180px;
-  color: ${({ theme }) => theme.colors.white};
+  display: flex;
+  margin-left: ${({ theme }) => theme.spacing.xxl * 3}px;
+  margin-right: ${({ theme }) => theme.spacing.xxl * 2}px;
+  gap: ${({ theme }) => theme.spacing.xxl}px;
 
-  ul {
-    list-style: none;
-    display: flex;
-  }
-
-  li + li {
-    margin-left: ${({ theme }) => theme.spacing.xxl}px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.header}px) {
+  // responsive navigation items
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
     display: none;
+  }
+`;
+
+export const HeaderButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  svg {
+    height: ${({ theme }) => theme.sizes.xl};
+  }
+
+  // responsive buttons
+  button:last-child {
+    display: none;
+    padding: 0;
+    margin-left: ${({ theme }) => theme.spacing.xxl}px;
+    @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+      display: block;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.widths.sm}px) {
+    button:first-child {
+      display: none;
+    }
   }
 `;

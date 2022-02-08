@@ -1,55 +1,37 @@
 import { FC } from "react";
-import Image from "next/image";
 
 import {
-  HeaderButtons,
   HeaderContainer,
   HeaderContent,
   NavigationContainer,
+  HeaderButtonsContainer,
 } from "./styles";
+
 import Button from "components/Button";
-import Link from "components/Link";
-import MenuButton from "./MenuButton";
+import NavItem from "./components/NavItem";
+import { LogoWhite, SandwichMenu } from "components/Icons";
 
 const Header: FC = () => {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <Image
-          src="/assets/logo-white.svg"
-          alt="Logo Neon"
-          height={30}
-          width={130}
-        />
+        <LogoWhite />
 
         <NavigationContainer>
-          <ul>
-            <li>
-              <Link href="/">Produtos Neon</Link>
-            </li>
-
-            <li>
-              <Link href="/">Conta digital PJ</Link>
-            </li>
-
-            <li>
-              <Link href="/">Quem somos</Link>
-            </li>
-
-            <li>
-              <Link href="/">Blog</Link>
-            </li>
-
-            <li>
-              <Link href="/">Ajuda</Link>
-            </li>
-          </ul>
+          <NavItem href="/" text="Produtos Neon" />
+          <NavItem href="/" text="Conta digital PJ" />
+          <NavItem href="/" text="Quem somos" />
+          <NavItem href="/" text="Blog" />
+          <NavItem href="/" text="Ajuda" />
         </NavigationContainer>
 
-        <HeaderButtons>
+        <HeaderButtonsContainer>
           <Button variant="light">Abra sua conta digital</Button>
-          <MenuButton />
-        </HeaderButtons>
+
+          <Button>
+            <SandwichMenu />
+          </Button>
+        </HeaderButtonsContainer>
       </HeaderContent>
     </HeaderContainer>
   );
