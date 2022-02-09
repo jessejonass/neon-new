@@ -91,6 +91,16 @@ const HeroContentResponsive = () => {
 
 const HeroInfoContainerResponsive = () => {
   const breakpoints = css`
+    @media (max-width: ${({ theme }) => theme.widths.xl}px) {
+      h2 {
+        margin-bottom: ${({ theme }) => theme.spacing.lg}px;
+      }
+
+      button {
+        margin-bottom: ${({ theme }) => theme.spacing.lg * 2}px;
+      }
+    }
+
     @media (max-width: ${({ theme }) => theme.widths.lg}px) {
       button {
         margin: 0 auto;
