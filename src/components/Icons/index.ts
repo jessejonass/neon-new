@@ -1,8 +1,14 @@
 export { default as AccountHero } from "./AccountHero";
+export { default as ChevronRight } from "./ChevronRight";
 export { default as CreditCardHero } from "./CreditCardHero";
+export { default as CreditCardsHero } from "./CreditCardsHero";
 export { default as HalfCircleWhiteHero } from "./HalfCircleWhiteHero";
+export { default as InvestmentsIntroduction } from "./InvestmentsIntroduction";
 export { default as LogoBlue } from "./LogoBlue";
 export { default as LogoRect } from "./LogoRect";
 export { default as LogoWhite } from "./LogoWhite";
 export { default as MoneyHero } from "./MoneyHero";
+export { default as NoAnnuityIntroduction } from "./NoAnnuityIntroduction";
+export { default as NoTaxesIntroduction } from "./NoTaxesIntroduction";
 export { default as SandwichMenu } from "./SandwichMenu";
+export { default as SmartphoneAppIntroduction } from "./SmartphoneAppIntroduction";
