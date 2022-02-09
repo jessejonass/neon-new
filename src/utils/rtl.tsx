@@ -2,6 +2,7 @@ import { render, RenderOptions } from "@testing-library/react";
 import React, { FC, ReactElement } from "react";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ThemeProvider } from "styled-components";
+import { light } from "../../styles/theme";
 import GlobalStyles from "../../styles/global";
 import "@testing-library/jest-dom";
 
@@ -17,7 +18,7 @@ const AllTheProviders: FC = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <ThemeProvider theme={{}}>
+      <ThemeProvider theme={light}>
         <QueryClientProvider client={client}>{children}</QueryClientProvider>
       </ThemeProvider>
     </>
