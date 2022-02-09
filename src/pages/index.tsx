@@ -7,7 +7,7 @@ const HomePage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Neon</title>
+        <title>Neon - A conta digital certa pra cuidar do seu dinheiro</title>
       </Head>
 
       <Header />
