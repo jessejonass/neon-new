@@ -22,7 +22,7 @@ const sizes = {
 
 const widths = {
   xxs: 0,
-  xs: 300,
+  xs: 280,
   sm: 600,
   md: 900,
   lg: 1200,
