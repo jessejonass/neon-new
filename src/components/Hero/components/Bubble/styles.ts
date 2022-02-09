@@ -28,9 +28,14 @@ export const BubbleCircle = styled.div`
 
 export const BubbleText = styled.span`
   line-height: ${({ theme }) => theme.spacing.lg}px;
+  text-align: start;
   max-width: 130px;
 
   @media (max-width: ${({ theme }) => theme.widths.sm}px) {
     max-width: 100%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.widths.xs}px) {
+    max-width: 70%;
   }
 `;

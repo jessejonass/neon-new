@@ -171,12 +171,12 @@ const CreditCardsContainerResponsive = () => {
     }
 
     @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-      left: -60px;
+      left: -10px;
       bottom: -30px;
     }
 
     @media (max-width: ${({ theme }) => theme.widths.sm}px) {
-      left: -20px;
+      left: 30px;
       bottom: -20px;
     }
   `;
@@ -191,7 +191,8 @@ const CreditCardsImageResponsive = () => {
     }
 
     @media (max-width: ${({ theme }) => theme.widths.sm}px) {
-      height: 260px;
+      height: 240px;
+      max-width: 100%;
     }
   `;
 
