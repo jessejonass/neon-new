@@ -48,7 +48,11 @@ describe("Button tests", () => {
   });
 
   it("should render with variant primary", () => {
-    render(<Button variant="primary">{buttonText}</Button>);
+    render(
+      <Button variant="primary" disabled>
+        {buttonText}
+      </Button>
+    );
 
     const button = screen.getByRole("button", { name: buttonText });
 
@@ -65,6 +69,14 @@ describe("Button tests", () => {
 
   it("should render with variant light", () => {
     render(<Button variant="light">{buttonText}</Button>);
+
+    const button = screen.getByRole("button", { name: buttonText });
+
+    expect(button).toBeInTheDocument();
+  });
+
+  it("should render with variant translucent", () => {
+    render(<Button variant="translucent">{buttonText}</Button>);
 
     const button = screen.getByRole("button", { name: buttonText });
 
