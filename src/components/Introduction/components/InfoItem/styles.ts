@@ -50,7 +50,7 @@ export const ChevronContainer = styled.div`
 // responsive
 const InfoContainerResponsive = () => css`
   @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-    gap: ${({ theme }) => theme.spacing.xs}px;
+    gap: ${({ theme }) => theme.spacing.sm}px;
   }
 `;
 
