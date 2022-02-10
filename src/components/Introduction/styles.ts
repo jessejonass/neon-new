@@ -18,6 +18,7 @@ export const AppContainer = styled.div`
     transition: 1s;
     transition-timing-function: ease-in;
   }
+
   ${() => AppContainerResponsive()}
 `;
 
@@ -61,62 +62,49 @@ export const MoreText = styled.span`
 `;
 
 // responsive
-const IntroductionContainerResponsive = () => {
-  const breakpoints = css`
-    @media (max-width: ${({ theme }) => theme.widths.xl}px) {
-      gap: ${({ theme }) => theme.spacing.xxl}px;
+const IntroductionContainerResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.xl}px) {
+    gap: ${({ theme }) => theme.spacing.xxl}px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+    gap: 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.widths.md}px) {
+    gap: 0;
+    padding: ${({ theme }) =>
+      `${theme.spacing.xxl * 2}px ${theme.spacing.xs}px`};
+  }
+`;
+
+const AppContainerResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+    svg {
+      transition: 1s;
+      transition-timing-function: ease-in;
+      transform: translateX(-80px);
     }
+  }
 
-    @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-      gap: 0;
+  @media (max-width: ${({ theme }) => theme.widths.md}px) {
+    svg {
+      display: none;
     }
+  }
+`;
 
-    @media (max-width: ${({ theme }) => theme.widths.md}px) {
-      gap: 0;
-    }
-  `;
+const InfoContainerResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+    width: 100%;
+    padding: 0;
+  }
+`;
 
-  return breakpoints;
-};
-
-const AppContainerResponsive = () => {
-  const breakpoints = css`
-    @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-      svg {
-        transition: 1s;
-        transition-timing-function: ease-in;
-        transform: translateX(-80px);
-      }
-    }
-
-    @media (max-width: ${({ theme }) => theme.widths.md}px) {
-      svg {
-        display: none;
-      }
-    }
-  `;
-
-  return breakpoints;
-};
-
-const InfoContainerResponsive = () => {
-  const breakpoints = css`
-    @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-      width: 100%;
-    }
-  `;
-
-  return breakpoints;
-};
-
-const InfoTitleContainerResponsive = () => {
-  const breakpoints = css`
-    @media (max-width: ${({ theme }) => theme.widths.md}px) {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-    }
-  `;
-
-  return breakpoints;
-};
+const InfoTitleContainerResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.md}px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+`;

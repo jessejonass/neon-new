@@ -75,126 +75,98 @@ export const BubblesContainer = styled.div`
 `;
 
 // responsivity
-const HeroContentResponsive = () => {
-  const breakpoints = css`
-    @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: ${({ theme }) => theme.spacing.xl * 2}px;
-      padding-bottom: 0;
-    }
-  `;
+const HeroContentResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: ${({ theme }) => theme.spacing.xl * 2}px;
+    padding-bottom: 0;
+  }
+`;
 
-  return breakpoints;
-};
-
-const HeroInfoContainerResponsive = () => {
-  const breakpoints = css`
-    @media (max-width: ${({ theme }) => theme.widths.xl}px) {
-      h2 {
-        margin-bottom: ${({ theme }) => theme.spacing.lg}px;
-      }
-
-      button {
-        margin-bottom: ${({ theme }) => theme.spacing.lg * 2}px;
-      }
-    }
-
-    @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-      button {
-        margin: 0 auto;
-        margin-bottom: ${({ theme }) => theme.spacing.xl * 2}px;
-      }
-    }
-  `;
-
-  return breakpoints;
-};
-
-const HeroCardContainerResponsive = () => {
-  const breakpoints = css`
+const HeroInfoContainerResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.xl}px) {
     h2 {
-      margin-bottom: ${({ theme }) => theme.spacing.xxl}px;
+      margin-bottom: ${({ theme }) => theme.spacing.lg}px;
     }
 
-    @media (max-width: ${({ theme }) => theme.widths.sm}px) {
-      h2 {
-        display: none;
-      }
+    button {
+      margin-bottom: ${({ theme }) => theme.spacing.lg * 2}px;
     }
-  `;
+  }
 
-  return breakpoints;
-};
-
-const BubblesContainerResponsive = () => {
-  const breakpoints = css`
-    @media (max-width: ${({ theme }) => theme.widths.sm}px) {
-      flex-direction: column;
-      align-items: flex-start;
-      max-width: 260px;
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+    button {
       margin: 0 auto;
+      margin-bottom: ${({ theme }) => theme.spacing.xl * 1}px;
     }
-  `;
+  }
+`;
 
-  return breakpoints;
-};
+const HeroCardContainerResponsive = () => css`
+  h2 {
+    margin-bottom: ${({ theme }) => theme.spacing.xxl}px;
+  }
 
-const HalfCicleContainerResponsive = () => {
-  const breakpoints = css`
-    @media (max-width: ${({ theme }) => theme.widths.xl}px) {
-      svg {
-        height: 420px;
-      }
+  @media (max-width: ${({ theme }) => theme.widths.sm}px) {
+    h2 {
+      display: none;
     }
+  }
+`;
 
-    @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-      position: static;
+const BubblesContainerResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.sm}px) {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+`;
+
+const HalfCicleContainerResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.xl}px) {
+    svg {
+      height: 420px;
     }
+  }
 
-    @media (max-width: ${({ theme }) => theme.widths.sm}px) {
-      svg {
-        height: 240px;
-      }
-    }
-  `;
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+    position: static;
+  }
 
-  return breakpoints;
-};
-
-const CreditCardsContainerResponsive = () => {
-  const breakpoints = css`
-    @media (max-width: ${({ theme }) => theme.widths.xl}px) {
-      right: 50px;
-      bottom: -50px;
-    }
-
-    @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-      left: -10px;
-      bottom: -30px;
-    }
-
-    @media (max-width: ${({ theme }) => theme.widths.sm}px) {
-      left: 30px;
-      bottom: -20px;
-    }
-  `;
-
-  return breakpoints;
-};
-
-const CreditCardsImageResponsive = () => {
-  const breakpoints = css`
-    @media (max-width: ${({ theme }) => theme.widths.xl}px) {
-      height: 380px;
-    }
-
-    @media (max-width: ${({ theme }) => theme.widths.sm}px) {
+  @media (max-width: ${({ theme }) => theme.widths.sm}px) {
+    svg {
       height: 240px;
-      max-width: 100%;
     }
-  `;
+  }
+`;
 
-  return breakpoints;
-};
+const CreditCardsContainerResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.xl}px) {
+    right: 50px;
+    bottom: -50px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+    left: -10px;
+    bottom: -30px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.widths.sm}px) {
+    left: 30px;
+    bottom: -20px;
+  }
+`;
+
+const CreditCardsImageResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.xl}px) {
+    height: 380px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.widths.sm}px) {
+    height: 240px;
+    max-width: 100%;
+  }
+`;
