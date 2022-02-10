@@ -6,6 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "jest -u --bail --coverage",
+    "test:watch": "jest -u --bail --coverage --watch",
     "create-icons": "svgr -d ./src/components/Icons --no-dimensions --typescript --ignore-existing --replace-attr-values \"#252525=currentColor\" --svg-props role=\"img\" ./src/components/Icons/svgs"
   },
   "dependencies": {
