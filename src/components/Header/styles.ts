@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -21,10 +21,7 @@ export const HeaderContent = styled.div`
   padding-top: ${({ theme }) => theme.sizes.md};
   padding-bottom: ${({ theme }) => theme.sizes.xxs};
 
-  // responsive content padding
-  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-    padding: ${({ theme }) => `${theme.sizes.xxl} 0`};
-  }
+  ${() => ResponsiveHeaderContent()}
 `;
 
 export const NavigationContainer = styled.nav`
@@ -33,10 +30,7 @@ export const NavigationContainer = styled.nav`
   margin-right: ${({ theme }) => theme.spacing.xxl * 2}px;
   gap: ${({ theme }) => theme.spacing.xxl}px;
 
-  // responsive navigation items
-  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
-    display: none;
-  }
+  ${() => NavigationContainerResponsive()}
 `;
 
 export const HeaderButtonsContainer = styled.div`
@@ -48,11 +42,28 @@ export const HeaderButtonsContainer = styled.div`
     height: ${({ theme }) => theme.sizes.xl};
   }
 
-  // responsive buttons
+  ${() => HeaderButtonsContainerResponsive()}
+`;
+
+// responsive
+const ResponsiveHeaderContent = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+    padding: ${({ theme }) => `${theme.sizes.xxl} 0`};
+  }
+`;
+
+const NavigationContainerResponsive = () => css`
+  @media (max-width: ${({ theme }) => theme.widths.lg}px) {
+    display: none;
+  }
+`;
+
+const HeaderButtonsContainerResponsive = () => css`
   button:last-child {
     display: none;
     padding: 0;
     margin-left: ${({ theme }) => theme.spacing.xxl}px;
+
     @media (max-width: ${({ theme }) => theme.widths.lg}px) {
       display: block;
     }
