@@ -1,7 +1,5 @@
-import { ReactNode } from "react";
-
 export type InfoItemProps = {
-  icon: ReactNode;
+  icon: JSX.Element;
   title: string;
   subtitle: string;
   href: string;

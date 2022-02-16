@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { ButtonHTMLAttributes } from "react";
 
 export type ButtonVariants = "primary" | "secondary" | "light" | "translucent";
 
@@ -8,5 +8,5 @@ export type StylesProps = {
 
 export type ButtonProps = StylesProps &
   ButtonHTMLAttributes<HTMLButtonElement> & {
-    children: string | ReactNode;
+    children: string | JSX.Element;
   };
