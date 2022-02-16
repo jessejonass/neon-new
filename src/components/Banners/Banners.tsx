@@ -33,7 +33,6 @@ const Banners: FC = () => {
       opacity: 0,
       scrollTrigger: {
         trigger: ".banners__container",
-        markers: true,
         start: "top 60%",
       },
     });
@@ -44,7 +43,6 @@ const Banners: FC = () => {
       opacity: 1,
       scrollTrigger: {
         trigger: ".banners__container",
-        markers: true,
         start: "top 60%",
       },
     });
@@ -55,7 +53,6 @@ const Banners: FC = () => {
       duration: 3,
       scrollTrigger: {
         trigger: ".banners__container",
-        markers: true,
         start: "top 60%",
       },
     });
@@ -66,7 +63,6 @@ const Banners: FC = () => {
       duration: 3,
       scrollTrigger: {
         trigger: ".banners__container",
-        markers: true,
         start: "top 60%",
       },
     });
