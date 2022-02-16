@@ -1,10 +1,8 @@
-import { ReactNode } from "react";
-
 export type TitleVariants = "sm" | "md" | "lg" | "xl" | "xxl";
 
 export type TitleProps = {
   variant: TitleVariants;
-  children: string | ReactNode;
+  children: string | JSX.Element;
   opacity?: number;
   maxWidth?: string;
 };
