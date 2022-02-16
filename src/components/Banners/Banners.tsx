@@ -30,40 +30,40 @@ const Banners: FC = () => {
     gsap.from(".download__container", {
       y: 200,
       duration: 1.5,
+      opacity: 0,
       scrollTrigger: {
         trigger: ".banners__container",
-        markers: true,
-        start: "top center",
+        start: "top 60%",
       },
     });
 
     gsap.to(".download__container", {
       y: 0,
       duration: 1.5,
+      opacity: 1,
       scrollTrigger: {
         trigger: ".banners__container",
-        markers: true,
-        start: "top center",
+        start: "top 60%",
       },
     });
 
     gsap.from(".pj__container", {
       y: 200,
+      opacity: 0,
       duration: 3,
       scrollTrigger: {
         trigger: ".banners__container",
-        markers: true,
-        start: "top center",
+        start: "top 60%",
       },
     });
 
     gsap.to(".pj__container", {
       y: 0,
+      opacity: 1,
       duration: 3,
       scrollTrigger: {
         trigger: ".banners__container",
-        markers: true,
-        start: "top center",
+        start: "top 60%",
       },
     });
   }, []);
