@@ -1,4 +1,4 @@
 export type BubbleProps = {
-  icon: JSX.Element;
+  icon: JSX.Element | string;
   children: JSX.Element | string;
 };
