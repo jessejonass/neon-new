@@ -7,6 +7,7 @@ export const BannersContainer = styled.div`
 
   display: flex;
   gap: ${({ theme }) => theme.spacing.xxl * 3}px;
+  overflow: hidden;
 `;
 
 export const DownloadContainer = styled.div`

@@ -26,19 +26,47 @@ import Button from "components/Button";
 const Banners: FC = () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // useEffect(() => {
-  //   gsap.to(".download__container", {
-  //     x: 800,
-  //     duration: 10,
-  //     scrollTrigger: {
-  //       trigger: ".banners__container",
-  //       markers: true,
-  //       start: "bottom bottom",
-  //       end: "bottom 80px",
-  //       scrub: true,
-  //     },
-  //   });
-  // }, []);
+  useEffect(() => {
+    gsap.from(".download__container", {
+      y: 200,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: ".banners__container",
+        markers: true,
+        start: "top center",
+      },
+    });
+
+    gsap.to(".download__container", {
+      y: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: ".banners__container",
+        markers: true,
+        start: "top center",
+      },
+    });
+
+    gsap.from(".pj__container", {
+      y: 200,
+      duration: 3,
+      scrollTrigger: {
+        trigger: ".banners__container",
+        markers: true,
+        start: "top center",
+      },
+    });
+
+    gsap.to(".pj__container", {
+      y: 0,
+      duration: 3,
+      scrollTrigger: {
+        trigger: ".banners__container",
+        markers: true,
+        start: "top center",
+      },
+    });
+  }, []);
 
   return (
     <BannersContainer className="banners__container">
@@ -66,7 +94,7 @@ const Banners: FC = () => {
         />
       </DownloadContainer>
 
-      <PJBannerAccountContainer>
+      <PJBannerAccountContainer className="pj__container">
         <PJBannerCardContainer>
           <Title variant="md">Neon Pejota</Title>
 
