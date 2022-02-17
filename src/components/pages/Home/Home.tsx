@@ -3,6 +3,7 @@ import { FC } from "react";
 import Hero from "components/Hero";
 import Introduction from "components/Introduction";
 import Banners from "components/Banners";
+import SocialProof from "components/SocialProof";
 
 const Home: FC = () => {
   return (
@@ -10,6 +11,7 @@ const Home: FC = () => {
       <Hero />
       <Introduction />
       <Banners />
+      <SocialProof />
     </div>
   );
 };
