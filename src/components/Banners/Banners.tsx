@@ -3,9 +3,11 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { FC, useEffect } from "react";
 
 import {
+  AppContainer,
   BannersContainer,
   DownloadContainer,
   DownloadLogoContainer,
+  DownloadOurAppContainer,
   DownloadSubtitle,
   PJBannerAccountContainer,
   PJBannerCardContainer,
@@ -14,6 +16,7 @@ import {
   PJBannersButtonsContainer,
 } from "./styles";
 import {
+  AppFuncionalities,
   AppleLogo,
   CardBanner,
   GooglePlayLogo,
@@ -50,7 +53,7 @@ const Banners: FC = () => {
     gsap.from(".pj__container", {
       y: 200,
       opacity: 0,
-      duration: 3,
+      duration: 1.5,
       scrollTrigger: {
         trigger: ".banners__container",
         start: "top 60%",
@@ -60,7 +63,7 @@ const Banners: FC = () => {
     gsap.to(".pj__container", {
       y: 0,
       opacity: 1,
-      duration: 3,
+      duration: 1.5,
       scrollTrigger: {
         trigger: ".banners__container",
         start: "top 60%",
@@ -70,29 +73,35 @@ const Banners: FC = () => {
 
   return (
     <BannersContainer className="banners__container">
-      <DownloadContainer className="download__container">
-        <DownloadLogoContainer>
-          <LogoSingleWhite />
-        </DownloadLogoContainer>
+      <DownloadOurAppContainer>
+        <AppContainer>
+          <AppFuncionalities />
+        </AppContainer>
 
-        <Title variant="sm">Baixe nosso app</Title>
-        <DownloadSubtitle>
-          Que tal abrir uma conta digital para ver como a gente faz a sua vida
-          muito mais simples?
-        </DownloadSubtitle>
+        <DownloadContainer className="download__container">
+          <DownloadLogoContainer>
+            <LogoSingleWhite />
+          </DownloadLogoContainer>
 
-        <DownloadLink
-          href="/"
-          icon={<AppleLogo />}
-          downloadSourceText="Apple Store"
-        />
+          <Title variant="sm">Baixe nosso app</Title>
+          <DownloadSubtitle>
+            Que tal abrir uma conta digital para ver como a gente faz a sua vida
+            muito mais simples?
+          </DownloadSubtitle>
 
-        <DownloadLink
-          href="/"
-          icon={<GooglePlayLogo />}
-          downloadSourceText="Google Play"
-        />
-      </DownloadContainer>
+          <DownloadLink
+            href="/"
+            icon={<AppleLogo />}
+            downloadSourceText="Apple Store"
+          />
+
+          <DownloadLink
+            href="/"
+            icon={<GooglePlayLogo />}
+            downloadSourceText="Google Play"
+          />
+        </DownloadContainer>
+      </DownloadOurAppContainer>
 
       <PJBannerAccountContainer className="pj__container">
         <PJBannerCardContainer>
