@@ -1,30 +1,11 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { FC, useEffect } from "react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import {
-  AppContainer,
-  BannersContainer,
-  DownloadContainer,
-  DownloadLogoContainer,
-  DownloadOurAppContainer,
-  DownloadSubtitle,
-  PJBannerAccountContainer,
-  PJBannerCardContainer,
-  PJBannerCardSubtitle,
-  PJBannerCardText,
-  PJBannersButtonsContainer,
-} from "./styles";
-import {
-  AppFuncionalities,
-  AppleLogo,
-  CardBanner,
-  GooglePlayLogo,
-  LogoSingleWhite,
-} from "components/Icons";
-import Title from "components/Title";
-import DownloadLink from "components/DownloadLink";
-import Button from "components/Button";
+import { BannersContainer } from "./styles";
+
+import Download from "./components/Download";
+import Account from "./components/Account";
 
 const Banners: FC = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -73,57 +54,8 @@ const Banners: FC = () => {
 
   return (
     <BannersContainer className="banners__container">
-      <DownloadOurAppContainer>
-        <AppContainer>
-          <AppFuncionalities />
-        </AppContainer>
-
-        <DownloadContainer className="download__container">
-          <DownloadLogoContainer>
-            <LogoSingleWhite />
-          </DownloadLogoContainer>
-
-          <Title variant="sm">Baixe nosso app</Title>
-          <DownloadSubtitle>
-            Que tal abrir uma conta digital para ver como a gente faz a sua vida
-            muito mais simples?
-          </DownloadSubtitle>
-
-          <DownloadLink
-            href="/"
-            icon={<AppleLogo />}
-            downloadSourceText="Apple Store"
-          />
-
-          <DownloadLink
-            href="/"
-            icon={<GooglePlayLogo />}
-            downloadSourceText="Google Play"
-          />
-        </DownloadContainer>
-      </DownloadOurAppContainer>
-
-      <PJBannerAccountContainer className="pj__container">
-        <PJBannerCardContainer>
-          <Title variant="md">Neon Pejota</Title>
-
-          <PJBannerCardSubtitle>
-            Contas digitais PJ gratuitas para decolar seu negócio!
-          </PJBannerCardSubtitle>
-
-          <PJBannerCardText>
-            As melhores contas para fazer pagamentos, compras e receber dos seus
-            clientes.
-          </PJBannerCardText>
-
-          <PJBannersButtonsContainer>
-            <Button variant="primary">Sou MEI</Button>
-            <Button variant="primary">Sou ME</Button>
-          </PJBannersButtonsContainer>
-
-          <CardBanner />
-        </PJBannerCardContainer>
-      </PJBannerAccountContainer>
+      <Download />
+      <Account />
     </BannersContainer>
   );
 };
