@@ -1,4 +1,5 @@
 export { default as AccountHero } from "./AccountHero";
+export { default as AppFuncionalities } from "./AppFuncionalities";
 export { default as AppleLogo } from "./AppleLogo";
 export { default as CardBanner } from "./CardBanner";
 export { default as ChevronRight } from "./ChevronRight";
@@ -11,7 +12,6 @@ export { default as InvestmentsIntroduction } from "./InvestmentsIntroduction";
 export { default as LogoBlue } from "./LogoBlue";
 export { default as LogoRect } from "./LogoRect";
 export { default as LogoSingleWhite } from "./LogoSingleWhite";
-export { default as LogoTranslucentBanner } from "./LogoTranslucentBanner";
 export { default as LogoWhite } from "./LogoWhite";
 export { default as MoneyHero } from "./MoneyHero";
 export { default as NoAnnuityIntroduction } from "./NoAnnuityIntroduction";
