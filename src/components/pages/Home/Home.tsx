@@ -7,12 +7,12 @@ import SocialProof from "components/SocialProof";
 
 const Home: FC = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Introduction />
       <Banners />
       <SocialProof />
-    </div>
+    </>
   );
 };
 
