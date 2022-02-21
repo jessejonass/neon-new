@@ -7,6 +7,8 @@ export const BannersContainer = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
+  padding: ${({ theme }) => theme.spacing.xs}px;
+
   ${() => BannersContainerResponsive()};
 `;
 
